@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste API - Meu VLT</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        form { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; }
+        div { margin-bottom: 10px; }
+        label { display: inline-block; width: 100px; }
+        #mensagem-api {
+            margin-top: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sucesso { background-color: #d4edda; color: #155724; }
+        .erro { background-color: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+
+    <h1>Painel de Teste - API Meu VLT</h1>
+
+    <div id="mensagem-api"></div>
+
+    <h2>Cadastrar Novo Usuário</h2>
+    <form id="form-cadastro">
+        <div>
+            <label for="cadastro-nome">Nome:</label>
+            <input type="text" id="cadastro-nome" required>
+        </div>
+        <div>
+            <label for="cadastro-email">Email:</label>
+            <input type="email" id="cadastro-email" required>
+        </div>
+        <div>
+            <label for="cadastro-senha">Senha:</label>
+            <input type="password" id="cadastro-senha" required>
+        </div>
+        <div>
+            <label for="cadastro-tipo">Tipo:</label>
+            <select id="cadastro-tipo">
+                <option value="Passageiro">Passageiro</option>
+                <option value="Condutor">Condutor</option>
+                <option value="Administrador">Administrador</option>
+            </select>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Fazer Login</h2>
+    <form id="form-login">
+        <div>
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" required>
+        </div>
+        <div>
+            <label for="login-senha">Senha:</label>
+            <input type="password" id="login-senha" required>
+        </div>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
