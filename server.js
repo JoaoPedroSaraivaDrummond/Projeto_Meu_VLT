@@ -1,5 +1,5 @@
 
-// server.js
+
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -12,8 +12,8 @@ const PORT = process.env.API_PORT || 3000;
 app.use(cors()); 
 app.use(express.json());
 
-// Rota principal da API
-app.use('/api', mainRouter); // Todas as rotas começarão com /api
+
+app.use('/api', mainRouter); 
 
 app.get('/', (req, res) => {
     res.send('API do Meu VLT está funcionando!');
